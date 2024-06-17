@@ -1,13 +1,14 @@
 #include "TicTacToe.h"
 #include <cassert>
+#include <iostream>
 
-void testPlaceMarker(){
+void testPlaceMaker() {
     TicTacToe game;
-    assert(game.placeMarker(0, 0) == true);
-    assert(game.placeMarker(0, 0) == false);
+    assert(game.placeMaker(0, 0) == true);
+    assert(game.placeMaker(0, 0) == false);
 }
 
-void testWinCondition(){
+void testWinCondition() {
     TicTacToe game;
     game.placeMaker(0, 0);
     game.placeMaker(1, 0);
@@ -17,9 +18,9 @@ void testWinCondition(){
     assert(game.checkWin() == true);
 }
 
-int main(){
-    testPlaceMarker();
+int main() {
+    testPlaceMaker();
     testWinCondition();
-    std::cout <<"All tests passed!" << std::endl;
+    std::cout << "All tests passed!" << std::endl;
     return 0;
 }

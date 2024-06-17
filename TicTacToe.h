@@ -1,22 +1,19 @@
 #ifndef TICTACTOE_H
 #define TICTACTOE_H
 
-class TicTacToe
-{
+class TicTacToe {
 public:
     TicTacToe();
     void playGame();
-
+    bool placeMaker(int row, int col); 
+    bool checkWin(); 
+    void printBoard();
+    void switchPlayer();
+    bool boardFull();
 private:
     char board[3][3];
     char currentMarker;
     int currentPlayer;
-
-    void printBoard();
-    bool placeMaker(int row, int col);
-    bool checkWin();
-    bool checkTie();
-    void switchPlayer();
 };
 
-#endif //TICTACTOE_H
+#endif // TICTACTOE_H
